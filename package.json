@@ -1,0 +1,37 @@
+{
+  "name": "flat-monorepo",
+  "private": true,
+  "scripts": {
+    "postinstall": "husky install",
+    "bootstrap": "yarn run _init:agora-configure && yarn install --frozen-lockfile --force",
+    "lint": "yarn workspaces run lint",
+    "check-spelling": "cspell --no-progress \"**/*.{md,ts,tsx,js,css,less,json,yml,yaml,html,sh}\"",
+    "storybook": "yarn workspace flat-components start",
+    "start": "node scripts/launch/index.js",
+    "preship": "rimraf desktop/renderer-app/dist desktop/main-app/dist desktop/main-app/release desktop/main-app/static",
+    "ship": "yarn workspace renderer-app build && yarn workspace flat ship",
+    "ship:mac": "yarn workspace renderer-app build && yarn workspace flat ship:mac",
+    "ship:win": "yarn workspace renderer-app build && yarn workspace flat ship:win",
+    "ship:all": "yarn workspace renderer-app build && yarn workspace flat ship:win && yarn workspace flat pack:mac",
+    "_init:agora-configure": "node scripts/init-agora-configure"
+  },
+  "workspaces": {
+    "packages": [
+      "desktop/*",
+      "web/*",
+      "packages/*"
+    ]
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-angular": "^11.0.0",
+    "ali-oss": "^6.15.2",
+    "cspell": "^5.6.6",
+    "dotenv-flow": "^3.2.0",
+    "husky": "^5.0.9",
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4"
+  }
+}

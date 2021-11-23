@@ -1,0 +1,35 @@
+.splash-container {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.splash-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 80px;
+    animation: flat-fly 0.6s;
+
+    img {
+        margin-bottom: 24px;
+    }
+
+    span {
+        color: #444e60;
+        font-size: 14px;
+    }
+}
+
+@keyframes flat-fly {
+    0% {
+        opacity: 0.3;
+        transition-timing-function: ease-in;
+        transition-timing-function: cubic-bezier(0.42, 0, 1, 1);
+        transform: translateY(210px);
+    }
+    100% {
+        transition-timing-function: ease-out;
+        transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+        transform: translateY(0);
+    }
+}

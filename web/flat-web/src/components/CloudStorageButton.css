@@ -1,0 +1,43 @@
+.cloud-storage-button-modal {
+  min-width: 840px;
+  min-height: 80vh;
+}
+.cloud-storage-button-modal > .ant-modal-content {
+  overflow: hidden;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-close {
+  top: 0;
+  right: 0;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-close > .ant-modal-close-x {
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-header {
+  padding: 0;
+  text-align: center;
+  border: none;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-header > .ant-modal-title {
+  font-size: 12px;
+  line-height: 2;
+  font-weight: 400;
+  color: #444e60;
+  background: #ececec;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-body {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+.cloud-storage-button-modal > .ant-modal-content > .ant-modal-footer {
+  display: none;
+}
+.cloud-storage-button-modal .cloud-storage-container-file-list {
+  padding: 16px 10px;
+}

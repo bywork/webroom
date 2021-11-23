@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "jsx": "react",
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "baseUrl": ".",
+    "paths": {
+      "flat-types": ["../../packages/flat-types/src"],
+      "flat-i18n": ["../../packages/flat-i18n/locales"],
+      "flat-components": ["../../packages/flat-components/src"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "public"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "typings/*.d.ts","scripts/*.ts", "vite.config.ts"]
+}

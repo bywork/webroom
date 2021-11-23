@@ -1,0 +1,4 @@
+static/render/
+release/*
+!release/.gitkeep
+*.pfx

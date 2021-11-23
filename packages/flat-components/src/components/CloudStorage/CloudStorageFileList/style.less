@@ -1,0 +1,114 @@
+.cloud-storage-file-list-table {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+
+    .ant-table {
+        color: #7a7b7c;
+    }
+
+    .ant-table-thead > tr > th {
+        color: #7a7b7c;
+        background: transparent;
+        user-select: none;
+    }
+
+    .ant-table-tbody > tr.ant-table-row:hover {
+        .cloud-storage-file-list-menu-btn-wrap {
+            opacity: 1;
+        }
+    }
+
+    .ant-table-tbody > tr.ant-table-row:hover > td {
+        background-color: rgba(51, 129, 255, 0.06);
+    }
+
+    td.ant-table-column-sort,
+    .ant-table-thead th.ant-table-column-has-sorters:hover {
+        background: inherit;
+    }
+
+    .ant-table-column-sorter {
+        opacity: 0;
+        transition: opacity 0.4s;
+    }
+
+    .ant-table-column-has-sorters:hover {
+        .ant-table-column-sorter {
+            opacity: 1;
+        }
+    }
+}
+
+.cloud-storage-file-list-filename-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 2em;
+}
+
+.cloud-storage-file-list-menu-btn-wrap {
+    position: absolute;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.4s;
+}
+
+.cloud-storage-file-list-menu-btn {
+    overflow: hidden;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    line-height: none;
+    background-color: transparent !important;
+
+    & > img {
+        max-width: none;
+        max-height: none;
+    }
+}
+
+.cloud-storage-file-list-menu {
+    & > .ant-dropdown-menu {
+        border-radius: 8px;
+        box-shadow: 0px 8px 24px 0px rgba(0, 0, 0, 0.08);
+    }
+
+    .ant-dropdown-menu-item {
+        padding: 9px 16px;
+        min-width: 164px;
+    }
+}
+
+.cloud-storage-file-list-title {
+    width: 56px;
+    height: 22px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #7a7b7c;
+    padding-right: 4px;
+}
+.cloud-storage-file-list-empty {
+    flex: 1;
+    margin-top: -2px;
+    position: relative;
+    background-color: #fff;
+}
+
+.cloud-storage-file-list-empty-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.cloud-storage-file-list-empty-text {
+    margin-left: -0.75em;
+    color: #7a7b7c;
+}
